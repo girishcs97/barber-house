@@ -1,0 +1,136 @@
+{
+  "Header": {
+    "title": "Welcome to Barber House",
+    "paragraph": "Discover expert barber services in Worcester, MA, where classic cuts and modern styles meet exceptional customer care"
+  },
+  "About": {
+    "paragraph": "At Barber House, we pride ourselves on delivering top-notch grooming services with a blend of traditional craftsmanship and contemporary flair. Our team of skilled barbers is dedicated to providing each client with personalized attention and expert advice to achieve the perfect look. From classic cuts to the latest trends, we ensure every visit leaves you feeling confident and looking your best. Step into our welcoming atmosphere and experience the artistry of barbering at Sharp Cuts.",
+    "Why": [
+      "Skilled Barbers",
+      "Precision Cuts",
+      "Personalized Attention",
+      "Modern Styles"
+    ],
+    "Why2": [
+      "Trendy Haircuts",
+      "Experienced Team",
+      "Trendy Styles",
+      "Customer Satisfaction"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Barber House",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-cut",
+      "name": "Haircut",
+      "type":"haircut",
+      "text": "Transform your look with our expert haircuts tailored to suit your style and personality. Our skilled barbers will create a precision cut that complements your features"
+    },
+    {
+      "icon": "fa fa-cut",
+      "name": "Shaving",
+      "type":"shaving",
+      "text": "Experience the art of traditional shaving with our meticulous techniques and premium products. Enjoy a smooth and refreshing shave that leaves your skin feeling rejuvenated."
+    },
+    {
+      "icon": "fa fa-cut",
+      "name": "Beards",
+      "type":"beard",
+      "text": "Let our barbers sculpt and groom your beard to perfection, whether it's a trim, shaping, or full beard maintenance. Enhance your facial features with a professionally styled beard."
+    },
+    {
+      "icon": "fa fa-cut",
+      "name": "Facial",
+      "type":"facial",
+      "text": "Revitalize your hair with our professional coloring services, offering a range of shades and techniques. Achieve natural-looking or bold color transformations with our expert colorists"
+    },
+    {
+      "icon": "fa fa-cut",
+      "name": "Coloring",
+      "type":"coloring",
+      "text": "Indulge in a relaxing facial treatment tailored to your skin type, featuring cleansing, exfoliation, and hydration. Renew your skin's vitality and leave feeling refreshed and rejuvenated."
+    },
+    {
+      "icon": "fa fa-cut",
+      "name": "Trend Styles",
+      "type":"trend",
+      "text": "Stay ahead of the trends with our innovative and contemporary hairstyle offerings. From classic looks to the latest styles, our barbers will create a fashion-forward haircut that suits you."
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Manager"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Stylist"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Apprentice"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Receptionist"
+    }
+  ],
+  "Contact": {
+    "address": "165 Vernon Street, Worcestor, MA ",
+    "phone": "+1 508 456 2341",
+    "email": "info@barberhouse.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  }
+}
