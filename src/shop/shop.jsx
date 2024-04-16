@@ -15,13 +15,13 @@ const Shop = () => {
             id: 2,
             name: 'Classic Barber Comb Set',
             price: 12.99,
-            imageUrl: 'img/shop/combo1.jpeg',
+            imageUrl: 'img/shop/combo1.jpg',
         },
         {
             id: 3,
             name: 'Stylish Barber Apron',
             price: 29.99,
-            imageUrl: 'img/shop/stylish_apron1.jpeg',
+            imageUrl: 'img/shop/stylish_apron1.jpg',
         },
         {
             id: 4,
@@ -33,13 +33,13 @@ const Shop = () => {
             id: 5,
             name: 'Classic Barber Comb Set',
             price: 12.99,
-            imageUrl: 'img/shop/combo2.jpeg',
+            imageUrl: 'img/shop/combo2.jpg',
         },
         {
             id: 6,
             name: 'Stylish Barber Apron',
             price: 29.99,
-            imageUrl: 'img/shop/stylish_apron2.jpeg',
+            imageUrl: 'img/shop/stylish_apron2.jpg',
         },
     ];
 
