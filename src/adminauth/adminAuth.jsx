@@ -47,10 +47,7 @@ const UserAuth = () => {
         <div className='bg-color'>
             <div className="container-fluid">
                 <div className='row'>
-                    <div className='col-sm-6' style={{ paddingLefteft: '39px' }}>
-                        {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                            className="custom-img" alt="" style={{ width: '170%', height: '100%' }} /> */}
-                    </div>
+                    <div className='col-sm-4'></div>
                     <div className='col-sm-6'>
                         <div className={`vertical-center border-style login-page`}>
                             <div className='text-center'>
@@ -59,11 +56,18 @@ const UserAuth = () => {
                                 width={25} alt="logo" className="mt-2" /> */}
                                 <p className='logo-header'>Barber House</p>
                             </div>
-                            <p className='margin-bottom2'>Username</p>
-                            <input type='text' placeholder="username" onChange={(e) => setUsername(e.target.value)} className='form-control mb-4' value={username}/>
-                            <p className='margin-bottom2'>Password</p>
-                            <input type='password' placeholder="password" onChange={(e) => setPassword(e.target.value)} className='form-control mb-4' value={password}/>
-                            <button className='btn-sign mt-3' onClick={() => { onSignIn() }} disabled={btndisabled}>Sign In</button>
+                            <div className='form-group'>
+                                <p style={{color:"white"}}>Username</p>
+                                <input type='text' placeholder="username" onChange={(e) => setUsername(e.target.value)} className='form-control' value={username} />
+                            </div>
+                            <div className='form-group'>
+                                <p style={{color:"white"}}>Password</p>
+                                <input type='password' placeholder="password" onChange={(e) => setPassword(e.target.value)} className='form-control mb-4' value={password} />
+                            </div>
+                            <div style={{textAlign:'center',marginTop:'20px'}} id='custom-btn-label'>
+                            <button className='btn btn-custom btn-lg' type={'submit'}  onClick={() => { onSignIn() }} disabled={btndisabled}>Sign In</button>
+                            </div>
+                           
                         </div>
 
                     </div>

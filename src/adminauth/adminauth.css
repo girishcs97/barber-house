@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 .vertical-center {
     margin-top: 10vh;
@@ -33,7 +33,7 @@
 .border-style {
     padding: 5vh;
     position: relative;
-    background-color: #eccfd7;
+    background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
     backdrop-filter: blur(30px);
     border-radius: 5px;
     box-shadow: 20px 20px rgba(0, 0, 0, .15);
@@ -41,23 +41,21 @@
 }
 
 .logo-header {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
     font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .header-title {
     font-size: 18px;
     font-weight: bold;
     color: black !important;
-} */
+}
 
-/* .nav-link.active {
-    background-color: #deaab9 !important;
-} */
-
-/* .btn-sign {
+.btn-sign {
     background-color: #0d6efd;
     color: white;
     font-style: inherit;
@@ -68,4 +66,15 @@
     width: 100%;
     border: #0d6efd;
     border-radius: 6px;
-} */
+}
+
+#custom-btn-label .btn-custom {
+    margin: 30px 0;
+    background: transparent;
+    border: 2px solid #fff;
+}
+  
+#custom-btn-label .btn-custom:hover {
+    color: #1f386e;
+    background: #fff;
+}

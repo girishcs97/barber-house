@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useCallback } from "react";
-import { GET_QUERIES, SEND_MAIL } from "../URLconstants";
+import { DECLINE_MAIL, GET_QUERIES, SEND_MAIL } from "../URLconstants";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
@@ -32,7 +32,6 @@ const AdminHomepage = () => {
     }, []);
 
     const onApproveQuery = useCallback(async (data) => {
-        console.log("data", data)
         const endTime = moment(data.datetime).add(30, 'm').toDate();
         try {
             const response = await axios({
@@ -40,7 +39,10 @@ const AdminHomepage = () => {
                     email: data.email,
                     startTime: data.datetime,
                     endTime: endTime,
-                    id: data._id
+                    id: data._id,
+                    name:data.name,
+                    service:data.service,
+                    barber:data.barber
                 }
             });
 
@@ -50,6 +52,48 @@ const AdminHomepage = () => {
                     const newQueries = queries.map((i) => {
                         if (i._id === data._id) {
                             return { ...i, status: "Approved" }
+                        } else {
+                            return i
+                        }
+                    })
+                    setQueries(newQueries)
+                }
+            }
+        }
+
+        catch (error) {
+            if (error.response) {
+                toast.error(error.response.data.message);
+            } else if (error.request) {
+                toast.error('No response received from the server');
+            } else {
+                toast.error('Error: ' + error.message);
+            }
+        }
+
+    }, [queries])
+
+    const onDeclineQuery = useCallback(async (data) => {
+        const endTime = moment(data.datetime).add(30, 'm').toDate();
+        try {
+            const response = await axios({
+                method: 'post', url: DECLINE_MAIL, data: {
+                    email: data.email,
+                    startTime: data.datetime,
+                    endTime: endTime,
+                    id: data._id,
+                    name:data.name,
+                    service:data.service,
+                    barber:data.barber
+                }
+            });
+
+            if (response && response.status === 200) {
+                toast.success("Declined Mail Sent Successfully");
+                if (response && response.data && response.data.result && response.data.result._id) {
+                    const newQueries = queries.map((i) => {
+                        if (i._id === data._id) {
+                            return { ...i, status: "Declined" }
                         } else {
                             return i
                         }
@@ -101,13 +145,13 @@ const AdminHomepage = () => {
                                                     <td>{i.email}</td>
                                                     <td>{i.service}</td>
                                                     <td>{i.barber}</td>
-                                                    <td>{i.datetime ? moment(i.datetime).format('MMMM Do YYYY, h:mm:ss a') : ''}</td>
+                                                    <td>{i.datetime ? moment(i.datetime).format('MMMM Do YYYY, h:mm a') : ''}</td>
                                                     <td>{i.message}</td>
                                                     <td>
                                                         <span className="margin-right-10px" onClick={() => onApproveQuery(i)}><IconContext.Provider value={{ color: "green", size: '2rem' }}>
                                                             <AiOutlineCheckCircle />
                                                         </IconContext.Provider></span>
-                                                        <span><IconContext.Provider value={{ color: "red", size: '2rem' }}>
+                                                        <span onClick={() => onDeclineQuery(i)}><IconContext.Provider value={{ color: "red", size: '2rem' }}>
                                                             <AiOutlineCloseCircle />
                                                         </IconContext.Provider></span>
                                                     </td>

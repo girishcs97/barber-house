@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Navigation = ({ isAdmin }) => {
+  
+  const history = useNavigate();
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -55,6 +58,11 @@ export const Navigation = ({ isAdmin }) => {
             <li>
               <a href="#contact" className="page-scroll">
                 Appointment
+              </a>
+            </li>
+            <li>
+              <a className="page-scroll" onClick={()=>history("/shop")}>
+                Shop
               </a>
             </li>
           </ul>

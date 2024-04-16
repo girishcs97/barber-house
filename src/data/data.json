@@ -70,37 +70,56 @@
       "icon": "fa fa-cut",
       "name": "Haircut",
       "type":"haircut",
-      "text": "Transform your look with our expert haircuts tailored to suit your style and personality. Our skilled barbers will create a precision cut that complements your features"
+      "text": "Transform your look with our expert haircuts tailored to suit your style and personality. Our skilled barbers will create a precision cut that complements your features",
+      "title1":"Crew Cut...............$10",
+      "title2":"Buzz Cut...............$15",
+      "title3":"Under Cut..............$12"
     },
     {
       "icon": "fa fa-cut",
       "name": "Shaving",
       "type":"shaving",
-      "text": "Experience the art of traditional shaving with our meticulous techniques and premium products. Enjoy a smooth and refreshing shave that leaves your skin feeling rejuvenated."
+      "text": "Experience the art of traditional shaving with our meticulous techniques and premium products. Enjoy a smooth and refreshing shave that leaves your skin feeling rejuvenated.",
+      "title1":"Clean Shave..............$10",
+      "title2":"Anchor...................$30",
+      "title3":"French Fork..............$25"
+      
     },
     {
       "icon": "fa fa-cut",
       "name": "Beards",
       "type":"beard",
-      "text": "Let our barbers sculpt and groom your beard to perfection, whether it's a trim, shaping, or full beard maintenance. Enhance your facial features with a professionally styled beard."
+      "text": "Let our barbers sculpt and groom your beard to perfection, whether it's a trim, shaping, or full beard maintenance. Enhance your facial features with a professionally styled beard.",
+      "title1":"Circle Beard..............$10",
+      "title2":"Imperial..................$20",
+      "title3":"Dutch.....................$30"
     },
     {
       "icon": "fa fa-cut",
       "name": "Facial",
       "type":"facial",
-      "text": "Revitalize your hair with our professional coloring services, offering a range of shades and techniques. Achieve natural-looking or bold color transformations with our expert colorists"
+      "text": "Revitalize your hair with our professional coloring services, offering a range of shades and techniques. Achieve natural-looking or bold color transformations with our expert colorists",
+      "title1":"Basic Package..............$10",
+      "title2":"Basic Plus Package.........$20",
+      "title3":"Premium Package............$30"
     },
     {
       "icon": "fa fa-cut",
       "name": "Coloring",
       "type":"coloring",
-      "text": "Indulge in a relaxing facial treatment tailored to your skin type, featuring cleansing, exfoliation, and hydration. Renew your skin's vitality and leave feeling refreshed and rejuvenated."
+      "text": "Indulge in a relaxing facial treatment tailored to your skin type, featuring cleansing, exfoliation, and hydration. Renew your skin's vitality and leave feeling refreshed and rejuvenated.",
+      "title1":"Full Hair..............$10",
+      "title2":"Frontial Part..........$15",
+      "title3":"General................$20"
     },
     {
       "icon": "fa fa-cut",
       "name": "Trend Styles",
       "type":"trend",
-      "text": "Stay ahead of the trends with our innovative and contemporary hairstyle offerings. From classic looks to the latest styles, our barbers will create a fashion-forward haircut that suits you."
+      "text": "Stay ahead of the trends with our innovative and contemporary hairstyle offerings. From classic looks to the latest styles, our barbers will create a fashion-forward haircut that suits you.",
+      "title1":"Normal..............$10",
+      "title2":"Premium.............$15",
+      "title3":"Ultra...............$20"
     }
   ],
   "Team": [
