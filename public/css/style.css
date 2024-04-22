@@ -407,7 +407,6 @@ header .intro-text {
 }
 
 .services-data {
-  margin: 1px -15px 0 -14px;
   padding: 0;
 }
 
@@ -634,6 +633,15 @@ header .intro-text {
   margin: 30px 0;
   background: transparent;
   border: 2px solid #fff;
+}
+
+#contact .btn-slot {
+  margin:5px;
+  margin-top: 10px;
+  background-color: #6372ff;
+  border-color: white;
+  color: rgba(255, 255, 255, 0.75);
+
 }
 
 #contact .btn-custom:hover {

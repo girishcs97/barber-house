@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { DECLINE_MAIL, GET_QUERIES, SEND_MAIL } from "../URLconstants";
 import toast from "react-hot-toast";
 import axios from "axios";
@@ -32,17 +32,31 @@ const AdminHomepage = () => {
     }, []);
 
     const onApproveQuery = useCallback(async (data) => {
-        const endTime = moment(data.datetime).add(30, 'm').toDate();
+        const currentDate = new Date(data.date);
+
+        // Add one hour to the current date
+        currentDate.setHours(currentDate.getHours() + 1);
+
+        // Format the updated date and time in 24-hour format
+        const updatedDate = currentDate.toISOString().slice(0, 10);
+        let updatedTime = currentDate.toISOString().slice(11, 19);
+
+        // Optionally adjust the time if it exceeds 23:59:59
+        if (currentDate.getHours() === 0) {
+            updatedTime = '00' + updatedTime.slice(2);
+        }
+
         try {
             const response = await axios({
                 method: 'post', url: SEND_MAIL, data: {
                     email: data.email,
-                    startTime: data.datetime,
-                    endTime: endTime,
+                    startTime: `${data.date}`,
+                    endTime: `${updatedDate}T${updatedTime}`,
+                    time:data.time,
                     id: data._id,
-                    name:data.name,
-                    service:data.service,
-                    barber:data.barber
+                    name: data.name,
+                    service: data.service,
+                    barber: data.barber
                 }
             });
 
@@ -74,17 +88,15 @@ const AdminHomepage = () => {
     }, [queries])
 
     const onDeclineQuery = useCallback(async (data) => {
-        const endTime = moment(data.datetime).add(30, 'm').toDate();
         try {
             const response = await axios({
                 method: 'post', url: DECLINE_MAIL, data: {
                     email: data.email,
-                    startTime: data.datetime,
-                    endTime: endTime,
+                    startTime: data.date,
                     id: data._id,
-                    name:data.name,
-                    service:data.service,
-                    barber:data.barber
+                    name: data.name,
+                    service: data.service,
+                    barber: data.barber
                 }
             });
 
@@ -145,7 +157,7 @@ const AdminHomepage = () => {
                                                     <td>{i.email}</td>
                                                     <td>{i.service}</td>
                                                     <td>{i.barber}</td>
-                                                    <td>{i.datetime ? moment(i.datetime).format('MMMM Do YYYY, h:mm a') : ''}</td>
+                                                    <td>{i.date ? moment(i.date).format('MMMM Do YYYY') + `, ${i.time}` : ''}</td>
                                                     <td>{i.message}</td>
                                                     <td>
                                                         <span className="margin-right-10px" onClick={() => onApproveQuery(i)}><IconContext.Provider value={{ color: "green", size: '2rem' }}>

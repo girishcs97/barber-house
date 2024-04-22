@@ -2,8 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import toast from 'react-hot-toast';
 import React from "react";
-import { SUBMIT_FORM } from "../URLconstants";
-
+import { FETCH_TIME_SLOTS, SUBMIT_FORM } from "../URLconstants";
 
 export const Contact = (props) => {
   const [date, setDate] = useState('');
@@ -12,7 +11,10 @@ export const Contact = (props) => {
   const [service, setService] = useState('haircut');
   const [barber, setBarber] = useState('anyone');
   const [message, setMessage] = useState('');
-  const [btndisabled, setbtnDisabled] = useState(false)
+  const [btndisabled, setbtnDisabled] = useState(false);
+  const slots = ['09:00', '10:00', "11:00", "12:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"]
+  const [timeSlots, setTimeSlots] = useState([])
+  const [time, setTime] = useState('')
 
 
   const onSubmitForm = async () => {
@@ -22,7 +24,8 @@ export const Contact = (props) => {
         method: 'post', url: SUBMIT_FORM, data: {
           name: name,
           email: email,
-          datetime: date,
+          date:`${date}T${time}:00.000Z`,
+          time: time,
           barber: barber,
           message: message,
           service: service,
@@ -52,6 +55,42 @@ export const Contact = (props) => {
 
     setbtnDisabled(false)
 
+  }
+
+  const onChangeDate = async (e) => {
+    setDate(e.target.value)
+    try {
+      const response = await axios({ method: 'get', url: FETCH_TIME_SLOTS, params: { date: new Date(e.target.value) } });
+      if (response && response.status === 200) {
+        console.log("resp",response)
+        if(!response.data.bookedTimeSlots){
+          setTimeSlots(slots)
+        }
+        else{
+          const data = slots.filter(i=> !response.data.bookedTimeSlots.includes( i ))
+          if(data && data.length){
+            setTimeSlots(data)
+          }
+          else{
+            setTimeSlots(null);
+          }
+        }
+      }
+    }
+    catch (error) {
+      if (error.response) {
+        toast.error(error.response.data.message);
+      } else if (error.request) {
+        toast.error('No response received from the server');
+      } else {
+        toast.error('Error: ' + error.message);
+      }
+    }
+  }
+
+  const onChangeTime = (e,i)=>{
+    e.preventDefault();
+    setTime(i);
   }
   return (
     <div>
@@ -134,18 +173,25 @@ export const Contact = (props) => {
                     <div className="form-group">
                       <p className='margin-bottom2 mt-4'>Select Date and Time</p>
                       <input
-                        type="datetime-local"
+                        type="date"
                         id="appointment-time"
                         name="appointment-time"
                         value={date}
-                        onChange={e => setDate(e.target.value)}
+                        onChange={e => onChangeDate(e)}
                         min={new Date()}
                         required
                         placeholder=""
                         className="form-control" />
+                      {date && timeSlots.map((i, index) => {
+                        return <button className="btn btn-sm btn-slot" key={index} onClick={e=>onChangeTime(e,i)}>
+                          {i}
+                        </button>
+                      })}
+                      {timeSlots === null && <p style={{marginTop:'10px'}}>No Timeslots Available. Please Choose Another Date</p> }
                       <p className="help-block text-danger"></p>
                     </div>
                   </div>
+                  {console.log("time",time)}
                 </div>
                 <div className="form-group">
                   <p>Message</p>
@@ -199,8 +245,8 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-building-o"></i> Timings
                 </span>{" "}
-                 Monday - Friday: 10am - 9pm<br/>
-                 Saturday - Sunday: 10am-6pm 
+                Monday - Friday: 10am - 9pm<br />
+                Saturday - Sunday: 10am-6pm
               </p>
             </div>
           </div>
