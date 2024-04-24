@@ -183,7 +183,7 @@ export const Contact = (props) => {
                         placeholder=""
                         className="form-control" />
                       {date && timeSlots.map((i, index) => {
-                        return <button className="btn btn-sm btn-slot" key={index} onClick={e=>onChangeTime(e,i)}>
+                        return <button className={`btn btn-sm btn-slot ${time === i?'btn-hg':''}`} key={index} onClick={e=>onChangeTime(e,i)}>
                           {i}
                         </button>
                       })}
@@ -191,7 +191,6 @@ export const Contact = (props) => {
                       <p className="help-block text-danger"></p>
                     </div>
                   </div>
-                  {console.log("time",time)}
                 </div>
                 <div className="form-group">
                   <p>Message</p>
