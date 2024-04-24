@@ -159,6 +159,7 @@ export const Contact = (props) => {
                       <p>With Whom?</p>
                       <select className='form-control' onChange={(e) => setBarber(e.target.value)} value={barber} required>
                         <option value="anyone">Anyone</option>
+                        <option value="jordan">Jordan</option>
                         <option value="nickBrooks">Nick Brooks</option>
                         <option value="erikBridges">Erik Bridges</option>
                         <option value="calvinLewis">Calvin Lewis</option>
