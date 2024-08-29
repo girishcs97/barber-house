@@ -240,7 +240,8 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url(../img/intro-backg.jpg) center center no-repeat;
+  opacity: 0.9;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;

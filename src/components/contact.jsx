@@ -245,8 +245,9 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-building-o"></i> Timings
                 </span>{" "}
-                Monday - Friday: 10am - 9pm<br />
-                Saturday - Sunday: 10am-6pm
+                Monday - Wednesday: 9am - 7pm<br />
+                Thursday - Saturday: 9am-8pm<br/>
+                Sunday Closed
               </p>
             </div>
           </div>
@@ -257,16 +258,6 @@ export const Contact = (props) => {
                   <li>
                     <a href={props.data ? props.data.facebook : "/"}>
                       <i className="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-instagram"></i>
                     </a>
                   </li>
                 </ul>

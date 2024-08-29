@@ -21,7 +21,7 @@ export const Navigation = ({ isAdmin }) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            Barber House
+            Tru Image
           </a>{" "}
         </div>
 
@@ -58,11 +58,6 @@ export const Navigation = ({ isAdmin }) => {
             <li>
               <a href="#contact" className="page-scroll">
                 Appointment
-              </a>
-            </li>
-            <li>
-              <a className="page-scroll" onClick={()=>history("/shop")}>
-                Shop
               </a>
             </li>
           </ul>

@@ -1,10 +1,10 @@
 {
   "Header": {
-    "title": "Welcome to Barber House",
+    "title": "Welcome to Tru Image Barbershop",
     "paragraph": "Discover expert barber services in Worcester, MA, where classic cuts and modern styles meet exceptional customer care"
   },
   "About": {
-    "paragraph": "At Barber House, we pride ourselves on delivering top-notch grooming services with a blend of traditional craftsmanship and contemporary flair. Our team of skilled barbers is dedicated to providing each client with personalized attention and expert advice to achieve the perfect look. From classic cuts to the latest trends, we ensure every visit leaves you feeling confident and looking your best. Step into our welcoming atmosphere and experience the artistry of barbering at Sharp Cuts.",
+    "paragraph": "At Tru Image Barbershop, we pride ourselves on delivering top-notch grooming services with a blend of traditional craftsmanship and contemporary flair. Our team of skilled barbers is dedicated to providing each client with personalized attention and expert advice to achieve the perfect look. From classic cuts to the latest trends in clothing and accessories, we ensure every visit leaves you feeling confident and looking your best. Step into our welcoming atmosphere and experience the artistry of barbering. And always remember, “You Can’t Express Who You Are Until You Have a TRU IMAGE“",
     "Why": [
       "Skilled Barbers",
       "Precision Cuts",
@@ -20,49 +20,49 @@
   },
   "Gallery": [
     {
-      "title": "Barber House",
+      "title": "Tru Image",
       "largeImage": "img/portfolio/01-small.jpg",
       "smallImage": "img/portfolio/01-small.jpg"
     },
     {
-      "title": "Barber House",
+      "title": "Tru Image",
       "largeImage": "img/portfolio/02-small.jpg",
       "smallImage": "img/portfolio/02-small.jpg"
     },
     {
-      "title": "Barber House",
+      "title": "Tru Image",
       "largeImage": "img/portfolio/03-small.jpg",
       "smallImage": "img/portfolio/03-small.jpg"
     },
     {
-      "title": "Barber House",
+      "title": "Tru Image",
       "largeImage": "img/portfolio/04-small.jpg",
       "smallImage": "img/portfolio/04-small.jpg"
     },
     {
-      "title": "Barber House",
+      "title": "Tru Image",
       "largeImage": "img/portfolio/05-small.jpg",
       "smallImage": "img/portfolio/05-small.jpg"
     },
     {
-      "title": "Barber House",
+      "title": "Tru Image",
       "largeImage": "img/portfolio/06-small.jpg",
       "smallImage": "img/portfolio/06-small.jpg"
     },
     {
-      "title": "Barber House",
-      "largeImage": "img/portfolio/07-small.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
+      "title": "Tru Image",
+      "largeImage": "img/portfolio/07-small.jpeg",
+      "smallImage": "img/portfolio/07-small.jpeg"
     },
     {
-      "title": "Barber House",
-      "largeImage": "img/portfolio/08-small.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
+      "title": "Tru Image",
+      "largeImage": "img/portfolio/08-small.jpeg",
+      "smallImage": "img/portfolio/08-small.jpeg"
     },
     {
-      "title": "Barber House",
-      "largeImage": "img/portfolio/09-small.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
+      "title": "Tru Image",
+      "largeImage": "img/portfolio/09-small.jpeg",
+      "smallImage": "img/portfolio/09-small.jpeg"
     }
   ],
   "Services": [
@@ -71,85 +71,70 @@
       "name": "Haircut",
       "type":"haircut",
       "text": "Transform your look with our expert haircuts tailored to suit your style and personality. Our skilled barbers will create a precision cut that complements your features",
-      "title1":"Crew Cut...............$10",
-      "title2":"Buzz Cut...............$15",
-      "title3":"Under Cut..............$12"
+      "title1":"Regular Cut...............$30",
+      "title2":"Kids Cut.......................$30",
+      "title3":"Seniors Cut................$25"
     },
     {
       "icon": "fa fa-cut",
       "name": "Shaving",
       "type":"shaving",
       "text": "Experience the art of traditional shaving with our meticulous techniques and premium products. Enjoy a smooth and refreshing shave that leaves your skin feeling rejuvenated.",
-      "title1":"Clean Shave..............$10",
-      "title2":"Anchor...................$30",
-      "title3":"French Fork..............$25"
-      
+      "title1":"Beard.......................$10",
+      "title2":"Shape up................$20"
     },
     {
       "icon": "fa fa-cut",
       "name": "Beards",
       "type":"beard",
       "text": "Let our barbers sculpt and groom your beard to perfection, whether it's a trim, shaping, or full beard maintenance. Enhance your facial features with a professionally styled beard.",
-      "title1":"Circle Beard..............$10",
-      "title2":"Imperial..................$20",
-      "title3":"Dutch.....................$30"
+      "title1":"Beard.......................$10",
+      "title2":"Shape up................$20"
     },
     {
       "icon": "fa fa-cut",
       "name": "Facial",
       "type":"facial",
       "text": "Revitalize your hair with our professional coloring services, offering a range of shades and techniques. Achieve natural-looking or bold color transformations with our expert colorists",
-      "title1":"Basic Package..............$10",
-      "title2":"Basic Plus Package.........$20",
-      "title3":"Premium Package............$30"
+      "title1":"Facials..............$10"
     },
     {
       "icon": "fa fa-cut",
       "name": "Coloring",
       "type":"coloring",
       "text": "Indulge in a relaxing facial treatment tailored to your skin type, featuring cleansing, exfoliation, and hydration. Renew your skin's vitality and leave feeling refreshed and rejuvenated.",
-      "title1":"Full Hair..............$10",
-      "title2":"Frontial Part..........$15",
-      "title3":"General................$20"
+      "title1":"Designs..............$5"
     },
     {
       "icon": "fa fa-cut",
-      "name": "Trend Styles",
+      "name": "Tru Image",
       "type":"trend",
       "text": "Stay ahead of the trends with our innovative and contemporary hairstyle offerings. From classic looks to the latest styles, our barbers will create a fashion-forward haircut that suits you.",
-      "title1":"Normal..............$10",
-      "title2":"Premium.............$15",
-      "title3":"Ultra...............$20"
+      "title1":"Tru Image package..............$80",
+      "title2":"(haircut, beard, hot towel shave, extra razors, facial, hair wash)"
     }
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Manager"
+      "img": "img/team/image0.jpeg",
+      "name": "Jordan",
+      "job": "Owner/Manager/Barber"
     },
     {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Stylist"
+      "img": "img/team/image1.jpeg",
+      "name": "Micheal",
+      "job": "Barber"
     },
     {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Apprentice"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Receptionist"
+      "img": "img/team/image2.jpeg",
+      "name": "Alejandro",
+      "job": "Barber"
     }
   ],
   "Contact": {
-    "address": "165 Vernon Street, Worcestor, MA ",
-    "phone": "+1 508 456 2341",
-    "email": "info@barberhouse.com",
-    "facebook": "fb.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "address": "85 Pleasant St, Worcester, MA 01609",
+    "phone": "+1 774-418-5992",
+    "email": "kustom97@icloud.com",
+    "facebook": "https://www.facebook.com/Tru.Image.Barbershop/"
   }
 }
